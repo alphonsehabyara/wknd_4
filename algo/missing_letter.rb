@@ -4,6 +4,30 @@
 
 def find_missing_letter(range)
 
+  char = range.split("")
+  letters = (char[0]..char[1]).to_a
+  letters.each do |char|
+    if char.include?(char) 
+      return char
+    elsif not letters.include?(char)
+      return char
+    else char == letters
+      return nil
+    end
+  end
+
+  # letters = range.split("")
+  # full_letters = (letters[0]..letters[-1]).to_a
+  # full_letters.each do |letter|
+  #   if letters.include?(letter)
+  #   elsif not letters.include?(letter)
+  #     return letter
+  #   end
+  #   if letters == full_letters
+  #     return nil
+  #   end
+  # end
+
 end
 
 # Driver code - don't touch anything below this line.
